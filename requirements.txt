@@ -1,0 +1,19 @@
+# Web & API Framework
+fastapi[standard]>=0.115.0
+uvicorn[standard]>=0.30.0
+jinja2>=3.1.4
+
+# Data Analysis & Scientific Computing
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.13.0
+statsmodels>=0.14.0
+scikit-learn>=1.5.0
+
+# Visualization
+matplotlib>=3.9.0
+seaborn>=0.13.0
+
+# Interactive Notebook Environment
+ipykernel>=6.29.0
+notebook>=7.2.0

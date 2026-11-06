@@ -1,0 +1,6 @@
+label,n,win_rate,expectancy,total_R,profit_factor,max_drawdown_R,note
+Baseline,2368,0.117,0.259,613.066,1.286,-382.667,exact
+TP@3.0R,2368,0.266,0.054,127.195,1.072,-162.209,approx for TP exits above planned_rr
+TP@2.0R,2368,0.335,-0.003,-6.024,0.996,-162.125,approx for TP exits above planned_rr
+TP@1.0R,2368,0.481,-0.043,-102.568,0.917,-151.505,approx for TP exits above planned_rr
+BE after +1R,2368,0.065,0.121,286.058,1.23,-227.022,approximate

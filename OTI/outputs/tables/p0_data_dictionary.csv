@@ -1,0 +1,51 @@
+column,dtype,null_count,min,max,inferred_meaning
+pos_id,int64,0,2,4732,Trade identifier
+pair,str,0,XAUUSDm,XAUUSDm,Symbol (XAUUSDm)
+signal_type,int64,0,4,53,Integer code for signal family
+signal,str,0,SIG_TYPE4_H1_M15,SIG_TYPE5_M30,Descriptive signal name
+direction,str,0,BUY,BUY,BUY or SELL
+zone_timeframe,str,0,H1,M30,Timeframe of S/D zone
+entry_timeframe,str,0,H1,M5,Execution entry timeframe
+date,datetime64[us],0,2025-10-01 00:00:00,2026-10-15 00:00:00,Calendar date
+entry_day,str,0,Fri,Wed,Day-of-week (Mon-Fri)
+open_time,datetime64[us],0,2025-10-01 01:15:00,2026-10-15 14:55:00,Entry timestamp (broker server time)
+close_time,datetime64[us],0,2025-10-01 02:54:39,2026-10-15 23:59:58,Exit timestamp
+duration_min,float64,0,0.3,153240.0,Trade duration in minutes
+open_hour,int64,0,1,23,Entry hour (server time)
+entry,float64,0,3844.953,5558.288,Entry price
+sl,float64,0,3819.32,5508.507,Stop-loss price
+tp,float64,0,3899.86,7487.334,Take-profit price
+close_price,float64,0,3850.722,5587.242,Actual close price
+lots,float64,0,0.08,10.17,Position size in lots
+sl_pips,float64,0,245.8,28047.9,SL distance in pips
+tp_pips,float64,0,2458.0,280479.0,TP distance in pips
+spread_pips,float64,0,16.0,36.0,Spread at entry (pips)
+risk_pts,int64,0,2458,280479,sl_pips × 10 (broker points)
+spread_pts,int64,0,160,360,spread_pips × 10 (broker points)
+planned_rr,float64,0,10.0,10.0,tp_pips / sl_pips
+risk_money,float64,0,2244.53,2500.0,Monetary risk per trade (USD)
+net_profit,float64,0,-17402.73,29380.65,P&L in account currency
+result_R,float64,0,-6.86,11.962,net_profit/risk_money — PRIMARY OUTCOME
+pnl_R,float64,0,-6.977,11.767,Similar to result_R; slight diff in some rows (cost adjustment)
+exit_reason,str,0,OPEN,TP,Trade close reason (SL/TP/other)
+zone_age,float64,0,0.1,47.0,Zone age in bars at time of entry
+zone_size_pips,float64,0,180.7,31146.1,S/D zone size in pips
+zone_touches,int64,0,1,9,Prior touches to the zone
+body_size_ratio,float64,0,0.084,3447.0,Entry candle body/range ratio
+engulf_depth,float64,0,0.1,6595.0,How deep entry candle penetrates zone (pips)
+MFE_R,float64,0,0.0,11.962,Max Favourable Excursion in R (always >= 0)
+MAE_R,float64,0,-6.86,-0.014,Max Adverse Excursion in R (negative = adverse move)
+max_p_b4_sl,float64,0,0.0,12.0,Max positive R reached before adverse move to SL (INFERRED)
+max_L_b4_tp,float64,0,0.0,6.9,Max adverse R before TP hit — drawdown before winning (INFERRED)
+excursion_flag,str,0,AMBIGUOUS_SL_TP,OPEN,"Trade-path flag: OK=normal, other=notable excursion (INFERRED)"
+min_to_MFE,float64,55,0.0,118748.3,Minutes from open to MFE
+min_to_MAE,float64,0,0.1,114350.8,Minutes from open to MAE
+min_to_1R,float64,1229,0.2,50430.2,Min to first +1R (null if MFE_R<1)
+min_to_2R,float64,1574,0.6,57926.5,Min to first +2R (null if MFE_R<2)
+min_to_3R,float64,1738,0.6,72077.8,Min to first +3R (null if MFE_R<3)
+min_R_after_1R,float64,1229,-6.86,7.84,Lowest R after reaching +1R (giveback)
+min_R_after_2R,float64,1574,-6.86,7.84,Lowest R after reaching +2R (giveback)
+computed_dur,float64,0,0.25,153239.96666666667,
+computed_day,str,0,Fri,Wed,
+computed_rr,float64,0,10.0,10.0,
+computed_R,float64,0,-6.977,11.7665,

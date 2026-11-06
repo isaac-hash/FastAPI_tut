@@ -1,0 +1,5 @@
+feature,spearman_rho,pval_raw,pval_adj,fdr_reject
+spread_to_sl,-0.3689,0.0,0.0,True
+zone_to_sl,-0.1119,0.0,0.0,True
+sl_to_zone,0.1119,0.0,0.0,True
+touches_per_age,-0.0159,0.44033,0.44033,False

@@ -1,0 +1,9 @@
+description,n_affected,exp_affected,exp_unaffected,pval_raw,pval_adj,holds_H1,holds_H2,model_WF,verdict
+Positive expectancy (all trades),2368,0.259,,0.00039,0.00039,N,N,NA,Weak candidate
+signal: best group (SIG_TYPE4_H4_H1),38,1.07,0.246,0.0158,0.0228,Y,Y,NA,Robust candidate
+zone_timeframe: best group (H4),67,0.994,0.237,0.0228,0.0228,Y,Y,NA,Robust candidate
+entry_timeframe: best group (H1),67,0.994,0.237,0.0228,0.0228,Y,Y,NA,Robust candidate
+entry_day: best group (Fri),495,0.703,0.142,0.0001,0.0003,Y,N,NA,Weak candidate
+open_hour: best group (5),120,0.829,0.228,0.0017,0.0034,Y,Y,NA,Robust candidate
+exit_reason: best group (TP),273,10.039,-1.016,0.0,0.0,Y,Y,NA,Robust candidate
+GBM top-50% filter (test set),356,-0.229,0.345,,,N,Y,NA,Likely noise

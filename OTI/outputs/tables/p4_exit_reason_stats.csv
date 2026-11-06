@@ -1,0 +1,4 @@
+group,n,share_pct,win_rate,expectancy,ci_lo,ci_hi,profit_factor,avg_duration_min,note
+OPEN,4,0.2,1.0,4.079,,,16318000000.0,42195.0,*skip* (n<30)
+SL,2091,88.3,0.0,-1.025,-1.036,-1.017,0.0,1613.8,
+TP,273,11.5,1.0,10.039,10.02,10.063,2740579000000.0,8207.7,
